@@ -1,0 +1,15 @@
+<h1>Hallo!</h1>
+<div>
+	<p>Authenticated: {{session.isAuthenticated}}</p>
+	<div>
+	{{#if session.isAuthenticated}}
+		<a {{action (route-action 'logout')}}>log out!</a>
+	{{else}}
+		log in
+		<a {{action (route-action 'logout')}}>log out!</a>
+	{{/if}}
+	</div>
+</div>
+
+
+{{outlet}}
