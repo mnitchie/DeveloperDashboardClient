@@ -15,3 +15,13 @@ export default Ember.Route.extend(UnauthenticatedRouteMixin, {
 		}
 	}
 });
+
+Routes
+
+/
+/register
+/login (same as /?)
+/app/(index) (authenticated) - the dashboard. all the stuff together in some kind of summary
+/app/<each service in more detail>
+/app/account (central place to manage user details, api keys, etc...)
+
