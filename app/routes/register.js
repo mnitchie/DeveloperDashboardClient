@@ -4,7 +4,14 @@ import UnauthenticatedRouteMixin from 'ember-simple-auth/mixins/unauthenticated-
 export default Ember.Route.extend(UnauthenticatedRouteMixin, {
 	actions: {
 		register() {
-			alert('woot');
+			Ember.$.ajax({
+				url: 'api/Account/Register',
+				type: 'POST',
+				body: {
+					username: 'username',
+					password: 'password'
+				}
+			});
 		}
 	}
 });
