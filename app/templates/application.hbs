@@ -1,15 +1,16 @@
-<h1>Hallo!</h1>
+{{!--top banner--}}
 <div>
 	<p>Authenticated: {{session.isAuthenticated}}</p>
 	<div>
 	{{#if session.isAuthenticated}}
 		<a {{action (route-action 'logout')}}>log out!</a>
 	{{else}}
-		log in
-		<a {{action (route-action 'logout')}}>log out!</a>
+		{{#link-to 'login'}}Log in{{/link-to}}
+		{{#link-to 'register'}}Register{{/link-to}}
 	{{/if}}
 	</div>
 </div>
 
+<h1>Hallo!</h1>
 
 {{outlet}}
