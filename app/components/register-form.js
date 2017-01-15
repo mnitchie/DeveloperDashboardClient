@@ -16,7 +16,7 @@ export default Ember.Component.extend({
 		this.attrs['on-submit'](this.get('user')).then(response => {
 			this.set('errors', null);
 
-			this.set('message', 'Registration Successfull'); // KLUDGE!
+			this.set('message', 'Registration Successfull'); // SAD!
 		}).catch(error => {
 			this.set('errors', error.errors);
 		}).finally(() => {
