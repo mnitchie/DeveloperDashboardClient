@@ -1,3 +1,17 @@
-{{input type="text" value=username placeholder="Username"}}
-{{input type="password" value=password placeholder="password"}}
+{{input type="text" value=user.userName placeholder="Username"}}
+{{input type="password" value=user.password placeholder="password"}}
+{{input type="password" value=user.confirmPassword placeholder="Re-enter password"}}
 <button type="submit">Submit</button>
+{{#if processing}}processing{{/if}}
+
+{{#if errors}}
+	<ul>
+	{{#each errors as |error|}}
+		<li>{{error}}</li>
+	{{/each}}
+	</ul>
+{{/if}}
+
+{{#if message}}
+	{{message}}
+{{/if}}
