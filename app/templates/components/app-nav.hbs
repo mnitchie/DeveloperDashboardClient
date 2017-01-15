@@ -1,0 +1,10 @@
+<div>
+	<div>
+	{{#if session.isAuthenticated}}
+		<button {{action 'logout'}}>log out!</button>
+	{{else}}
+		{{#link-to 'login'}}Log in{{/link-to}}
+		{{#link-to 'register'}}Register{{/link-to}}
+	{{/if}}
+	</div>
+</div>

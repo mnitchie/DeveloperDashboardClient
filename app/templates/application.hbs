@@ -1,14 +1,3 @@
-{{!--top banner--}}
-<div>
-	<p>Authenticated: {{session.isAuthenticated}}</p>
-	<div>
-	{{#if session.isAuthenticated}}
-		<a {{action (route-action 'logout')}}>log out!</a>
-	{{else}}
-		{{#link-to 'login'}}Log in{{/link-to}}
-		{{#link-to 'register'}}Register{{/link-to}}
-	{{/if}}
-	</div>
-</div>
+{{app-nav}}
 
 {{outlet}}
